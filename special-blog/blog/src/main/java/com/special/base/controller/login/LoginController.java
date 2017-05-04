@@ -1,6 +1,9 @@
 package com.special.base.controller.login;
 
+import java.util.Enumeration;
+
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
@@ -42,4 +45,20 @@ public class LoginController extends BaseController {
 		request.getSession().setAttribute(Constants.CURRENT_USER_BIND, bind);
 		return true;
 	}
+	
+
+    /**
+     * 退出登陆，清除Session
+     * @param request
+     * @return
+     */
+    @RequestMapping("/logout")
+    public String logout(HttpServletRequest request) {
+        HttpSession session = request.getSession();
+        Enumeration<String> enums = session.getAttributeNames();
+        while (enums.hasMoreElements()) {
+            session.removeAttribute(enums.nextElement().toString());
+        }
+        return "redirect:/login.jsp";
+    }
 }
