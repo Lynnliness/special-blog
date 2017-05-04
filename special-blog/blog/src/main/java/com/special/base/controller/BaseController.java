@@ -22,7 +22,7 @@ package com.special.base.controller;
  */
 public class BaseController {
     public static void main(String[] args) {
-        System.out.println("larry is a big big sb");
+        System.out.println("larry is a big big sb,he is my rou bian qi");
     }
 } 
 
