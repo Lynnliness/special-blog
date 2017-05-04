@@ -20,8 +20,11 @@ package com.special.base.controller;
  * @date 2017年5月4日 下午3:31:12
  * @version 
  */
-public class BaseController {
 
+public class BaseController {
+    public static void main(String[] args) {
+        System.out.println(" Larry is a sb");
+    }
 }
 
 
