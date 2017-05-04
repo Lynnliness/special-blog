@@ -12,6 +12,14 @@
 		<maven.test.skip>true</maven.test.skip>
 	</properties>
 	<dependencies>
+		<!-- Servlet API start -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+		</dependency>
+		<!-- Servlet API end -->
+
 		<!-- log4j start -->
 		<dependency>
 			<groupId>log4j</groupId>

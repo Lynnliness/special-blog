@@ -1,0 +1,45 @@
+package com.special.base.controller.login;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.BeanUtils;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.special.base.common.Constants;
+import com.special.base.controller.BaseController;
+
+/**
+ * 
+ * @author Lynnliness
+ * @version 1.0
+ * @since 2017-05-04 20:29:19
+ * @des 用户登陆控制器
+ */
+@Controller
+@RequestMapping(value = "/")
+public class LoginController extends BaseController {
+
+	/**
+	 * 
+	 * @param username
+	 * @param password
+	 * @return
+	 */
+	@RequestMapping("/login")
+	@ResponseBody
+	public Object login(String username, String password, HttpServletRequest request) {
+		if (StringUtils.isEmpty(username)) {
+			return "用户名不可为空";
+		}
+		if (StringUtils.isEmpty(password)) {
+			return "密码不可为空";
+		}
+		Object bind = new Object();
+		BeanUtils.copyProperties(new Object(), bind);
+		request.getSession().setAttribute(Constants.CURRENT_USER_BIND, bind);
+		return true;
+	}
+}
