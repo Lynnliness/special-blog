@@ -13,19 +13,23 @@
  */
 package com.special.base.controller;
 
-/** 
+import org.springframework.stereotype.Controller;
+
+/**
  * @Type BaseController.java
- * @Desc 
+ * @Desc
  * @author Zxs
  * @date 2017年5月4日 下午3:31:12
- * @version 
+ * @version
  */
+@Controller
 public class BaseController {
-    public static void main(String[] args) {
-        System.out.println("larry is a big big sb,he is my rou bian qi");
-    }
-} 
+	public static void main(String[] args) {
+		System.out.println("larry is a big big sb,he is my rou bian qi");
+	}
 
+	
+}
 
 /**
  * Revision history
