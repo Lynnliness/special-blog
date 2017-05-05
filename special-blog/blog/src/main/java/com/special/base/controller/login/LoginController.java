@@ -30,7 +30,7 @@ public class LoginController extends BaseController {
 
     @RequestMapping(value = "/web/login", method = RequestMethod.GET)
     public ModelAndView toLogin() {
-        return new ModelAndView("login");
+        return new ModelAndView("index");
     }
 
     /**

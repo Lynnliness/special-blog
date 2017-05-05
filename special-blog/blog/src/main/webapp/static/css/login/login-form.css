@@ -7,7 +7,9 @@
 }
 
 .form {
-	position: relative;
+	position:absolute;
+	top:25%;
+	right:15%;
 	z-index: 1;
 	background: #FFFFFF;
 	max-width: 360px;
@@ -104,16 +106,16 @@
 	color: #EF3B3A;
 }
 
-body {
-	background: #76b852; /* fallback for old browsers */
-	background: -webkit-linear-gradient(right, rgba(189, 206, 47, 0.89), #8DC26F);
-	background: -moz-linear-gradient(right, rgba(189, 206, 47, 0.89), #8DC26F);
-	background: -o-linear-gradient(right, rgba(189, 206, 47, 0.89), #8DC26F);
-	background: linear-gradient(to left, rgba(189, 206, 47, 0.89), #8DC26F);
-	font-family: "Roboto", sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
+/* body { */
+/* 	background: #76b852; fallback for old browsers */
+/* 	background: -webkit-linear-gradient(right, rgba(189, 206, 47, 0.89), #8DC26F); */
+/* 	background: -moz-linear-gradient(right, rgba(189, 206, 47, 0.89), #8DC26F); */
+/* 	background: -o-linear-gradient(right, rgba(189, 206, 47, 0.89), #8DC26F); */
+/* 	background: linear-gradient(to left, rgba(189, 206, 47, 0.89), #8DC26F); */
+/* 	font-family: "Roboto", sans-serif; */
+/* 	-webkit-font-smoothing: antialiased; */
+/* 	-moz-osx-font-smoothing: grayscale; */
+/* } */
 
 .shake_effect {
 	-webkit-animation-name: shake;
