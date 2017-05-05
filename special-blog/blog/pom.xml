@@ -12,6 +12,12 @@
 		<maven.test.skip>true</maven.test.skip>
 	</properties>
 	<dependencies>
+	   <!--jackson依赖 -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.4.2</version>
+        </dependency>
 		<!-- Servlet API start -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -144,6 +150,11 @@
 			<artifactId>spring-test</artifactId>
 			<version>4.2.5.RELEASE</version>
 		</dependency>
+		<dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>4.0.4.RELEASE</version>
+        </dependency>
 		<!-- Spring End -->
 
 	</dependencies>

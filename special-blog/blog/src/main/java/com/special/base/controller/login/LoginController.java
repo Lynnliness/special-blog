@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.special.base.common.Constants;
+import com.special.base.common.JsonResult;
 import com.special.base.controller.BaseController;
 
 /**
@@ -25,27 +26,26 @@ import com.special.base.controller.BaseController;
 @RequestMapping(value = "/")
 public class LoginController extends BaseController {
 
-	/**
-	 * 
-	 * @param username
-	 * @param password
-	 * @return
-	 */
-	@RequestMapping("/login")
-	@ResponseBody
-	public Object login(String username, String password, HttpServletRequest request) {
-		if (StringUtils.isEmpty(username)) {
-			return "用户名不可为空";
-		}
-		if (StringUtils.isEmpty(password)) {
-			return "密码不可为空";
-		}
-		Object bind = new Object();
-		BeanUtils.copyProperties(new Object(), bind);
-		request.getSession().setAttribute(Constants.CURRENT_USER_BIND, bind);
-		return true;
-	}
-	
+    /**
+     * 
+     * @param username
+     * @param password
+     * @return
+     */
+    @RequestMapping("/login")
+    @ResponseBody
+    public JsonResult login(String username, String password, HttpServletRequest request) {
+        if (StringUtils.isEmpty(username)) {
+            return errorResult("用户名不可为空");
+        }
+        if (StringUtils.isEmpty(password)) {
+            return errorResult("密码不可为空");
+        }
+        Object bind = new Object();
+        BeanUtils.copyProperties(new Object(), bind);
+        request.getSession().setAttribute(Constants.CURRENT_USER_BIND, bind);
+        return successResult("", username + "/" + password);
+    }
 
     /**
      * 退出登陆，清除Session
