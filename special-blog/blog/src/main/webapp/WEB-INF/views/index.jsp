@@ -1,21 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page isELIgnored="false"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
-<%
-	response.setHeader("Cache-Control", "no-store");
-	response.setHeader("Pragrma", "no-cache");
-	response.setDateHeader("Expires", 0);
-%>
-<c:set var="contextPath" value="${pageContext.request.contextPath}" />
-<!DOCTYPE html>
+<%@include file="./common/config.jsp" %>
 <html lang="zh">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title></title>
 <link rel="stylesheet" type="text/css"
 	href="${contextPath }/static/css/index/styles.css">
@@ -50,41 +37,40 @@
 			</div>
 			<div class="slider3d__inner">
 				<div class="slider3d__rotater">
-					<div class="slider3d__item">
+					<div class="slider3d__item" style="background-image: url(../static/img/1.jpg);no-repeat">
 						<h2 class="slider3d__heading" data-text="SO HEADING"></h2>
 					</div>
-					<div class="slider3d__item">
+					<div class="slider3d__item" style="background-image: url(../static/img/2.jpg);no-repeat">
 						<h2 class="slider3d__heading" data-text="MUCH ROTATION"></h2>
 					</div>
-					<div class="slider3d__item">
+					<div class="slider3d__item" style="background-image: url(../static/img/3.jpg);no-repeat">
 						<h2 class="slider3d__heading" data-text="VERY 3D"></h2>
 					</div>
-					<div class="slider3d__item">
+					<div class="slider3d__item" style="background-image: url(../static/img/4.jpg);no-repeat">
 						<h2 class="slider3d__heading" data-text="SUCH JAVASCRIPT"></h2>
 					</div>
-					<div class="slider3d__item">
+					<div class="slider3d__item" style="background-image: url(../static/img/5.jpg);no-repeat">
 						<h2 class="slider3d__heading" data-text="WOW WOW!"></h2>
 					</div>
 				</div>
 
 			</div>
-			<!-- 隐藏控制按钮 -->
-			<!-- 		<div class="slider3d__controls"> -->
-			<!-- 			<div class="slider3d__handle"> -->
-			<!-- 				<div class="slider3d__handle__inner"> -->
-			<!-- 					<div class="slider3d__handle__rotater"> -->
-			<!-- 						<div class="slider3d__handle__item active">Page 1</div> -->
-			<!-- 						<div class="slider3d__handle__item">Page 2</div> -->
-			<!-- 						<div class="slider3d__handle__item">Page 3</div> -->
-			<!-- 						<div class="slider3d__handle__item">Page 4</div> -->
-			<!-- 						<div class="slider3d__handle__item">Page 5</div> -->
-			<!-- 					</div> -->
-			<!-- 				</div> -->
-			<!-- 			</div> -->
-			<!-- 			<div class="slider3d__control m--up"></div> -->
-			<!-- 			<div class="slider3d__control m--down"></div> -->
-			<!-- 		</div> -->
-
+			<!-- 			隐藏控制按钮 -->
+			<div class="slider3d__controls">
+<!-- 						<div class="slider3d__handle"> -->
+<!-- 							<div class="slider3d__handle__inner"> -->
+<!-- 								<div class="slider3d__handle__rotater"> -->
+<!-- 									<div class="slider3d__handle__item active">Page 1</div> -->
+<!-- 									<div class="slider3d__handle__item">Page 2</div> -->
+<!-- 									<div class="slider3d__handle__item">Page 3</div> -->
+<!-- 									<div class="slider3d__handle__item">Page 4</div> -->
+<!-- 									<div class="slider3d__handle__item">Page 5</div> -->
+<!-- 								</div> -->
+<!-- 							</div> -->
+<!-- 						</div> -->
+				<div class="slider3d__control m--up"></div>
+				<div class="slider3d__control m--down"></div>
+			</div>
 		</div>
 
 		<script src="${contextPath }/static/common/jquery-3.2.1.js"></script>
