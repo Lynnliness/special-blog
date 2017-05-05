@@ -12,6 +12,13 @@
 		<maven.test.skip>true</maven.test.skip>
 	</properties>
 	<dependencies>
+	   <!-- jstl -->
+	   <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+	   <!-- jstl -->
 	   <!--jackson依赖 -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
