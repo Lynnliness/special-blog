@@ -16,7 +16,13 @@
 	href="${contextPath }/bootstrap/dist/css/bootstrap.css">
 </head>
 <body>
+
 	<div class="slider3d first">
+		<div style="float: left; z-index: 999; position: absolute;margin-left: 5px">
+		  <iframe width="455" scrolling="no" height="18" frameborder="0" allowtransparency="true" 
+		      src="http://i.tianqi.com/index.php?c=code&id=1&icon=1&wind=1&num=2">
+		  </iframe>
+		</div>
 		<div class="slider3d__wrapper">
 			<div id="login_form" class="form">
 				<form class="register-form">
@@ -40,7 +46,9 @@
 					</p>
 				</form>
 			</div>
+
 			<div class="slider3d__inner">
+
 				<div class="slider3d__rotater">
 					<div class="slider3d__item"
 						style="background-image: url(../static/img/1.jpg);">
@@ -89,7 +97,7 @@
 					}, 1);
 				}
 			}
-			
+
 			var formValidater = null;
 			$().ready(function() {
 				formValidater = $("#login_validate_form").validate({
@@ -118,36 +126,53 @@
 					return false;
 				})
 
-				$("#login").click(function() {
-					if(formValidater.valid()){
-						var name = $("#user_name").val();
-						var pass = $("#password").val();
-						AjaxUtil.request({
-							url : '${contextPath }/login.do',
-							params : {
-								"username" : name,
-								"password" : pass
-							},
-							type : 'json',
-							callback : function res(res) {
-								if (res.success) {
-									$("#login").button('loading').delay(1000).queue(
-										function() {$("#login").button('complete');
-									});
-									window.location.href = "${contextPath }/index.htm";
-								} else {
-									layer.tips(res.message,'#login');
-									$("#login").button('reset')
-								}
-							}
-						});
-					}else{
-						$("#login_form").removeClass('shake_effect');
-						setTimeout(function() {
-							$("#login_form").addClass('shake_effect')
-						}, 1);
-					}
-				})
+				$("#login")
+						.click(
+								function() {
+									if (formValidater.valid()) {
+										var name = $("#user_name").val();
+										var pass = $("#password").val();
+										AjaxUtil
+												.request({
+													url : '${contextPath }/login.do',
+													params : {
+														"username" : name,
+														"password" : pass
+													},
+													type : 'json',
+													callback : function res(res) {
+														if (res.success) {
+															$("#login")
+																	.button(
+																			'loading')
+																	.delay(1000)
+																	.queue(
+																			function() {
+																				$(
+																						"#login")
+																						.button(
+																								'complete');
+																			});
+															window.location.href = "${contextPath }/index.htm";
+														} else {
+															layer
+																	.tips(
+																			res.message,
+																			'#login');
+															$("#login").button(
+																	'reset')
+														}
+													}
+												});
+									} else {
+										$("#login_form").removeClass(
+												'shake_effect');
+										setTimeout(function() {
+											$("#login_form").addClass(
+													'shake_effect')
+										}, 1);
+									}
+								})
 				$('.message a').click(function() {
 					$('form').animate({
 						height : 'toggle',
