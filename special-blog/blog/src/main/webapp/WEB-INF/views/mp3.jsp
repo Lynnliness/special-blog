@@ -54,7 +54,7 @@ p {
 </head>
 <script src="${contextPath }/static/js/mp3/dist/APlayer.min.js"></script>
 
-<body>
+<body >
 	<div class="container">
 		<div id="player1" class="aplayer"></div>
 		<script>
@@ -64,7 +64,7 @@ p {
 				autoplay : true,
 				showlrc : false,
 				music : {
-					title : '我喜欢上你时的内心活动.mp3',
+					title : '我喜欢上你时的内心活动',
 					author : '陈绮贞',
 					url : '${contextPath}/static/js/mp3/music/ilikeu.mp3',
 					pic : '${contextPath}/static/js/mp3/music/ilikeu.jpg'

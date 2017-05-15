@@ -277,7 +277,7 @@ body a {
 }
 .header-right nav ul li a{
     color: #454445;
-    font-family: 'Oleo Script', cursive;
+/*     font-family: 'Oleo Script', cursive; */
 	text-decoration: none;
 }
 .header-right nav ul li a span{

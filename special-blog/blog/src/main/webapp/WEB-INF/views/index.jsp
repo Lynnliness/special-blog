@@ -126,53 +126,35 @@
 					return false;
 				})
 
-				$("#login")
-						.click(
-								function() {
-									if (formValidater.valid()) {
-										var name = $("#user_name").val();
-										var pass = $("#password").val();
-										AjaxUtil
-												.request({
-													url : '${contextPath }/login.do',
-													params : {
-														"username" : name,
-														"password" : pass
-													},
-													type : 'json',
-													callback : function res(res) {
-														if (res.success) {
-															$("#login")
-																	.button(
-																			'loading')
-																	.delay(1000)
-																	.queue(
-																			function() {
-																				$(
-																						"#login")
-																						.button(
-																								'complete');
-																			});
-															window.location.href = "${contextPath }/index.htm";
-														} else {
-															layer
-																	.tips(
-																			res.message,
-																			'#login');
-															$("#login").button(
-																	'reset')
-														}
-													}
-												});
-									} else {
-										$("#login_form").removeClass(
-												'shake_effect');
-										setTimeout(function() {
-											$("#login_form").addClass(
-													'shake_effect')
-										}, 1);
-									}
-								})
+				$("#login").click(function() {
+					if (formValidater.valid()) {
+						var name = $("#user_name").val();
+						var pass = $("#password").val();
+						AjaxUtil.request({
+							url : '${contextPath }/login.do',
+							params : {
+								"username" : name,
+								"password" : pass
+							},
+							type : 'json',
+							callback : function res(res) {
+								if (res.success) {
+									$("#login").button('loading').delay(1000).queue(
+											function() {$("#login").button('complete');
+									});
+									window.location.href = "${contextPath }/index.htm";
+								}
+								else {
+									layer.tips(res.message,'#login');
+									$("#login").button('reset')}
+								}
+							});
+					} else {
+						$("#login_form").removeClass('shake_effect');
+						setTimeout(function() {
+							$("#login_form").addClass('shake_effect')}, 1);
+						}
+					})
 				$('.message a').click(function() {
 					$('form').animate({
 						height : 'toggle',
