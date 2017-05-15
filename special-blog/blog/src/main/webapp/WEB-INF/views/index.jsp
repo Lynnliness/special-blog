@@ -51,23 +51,23 @@
 
 				<div class="slider3d__rotater">
 					<div class="slider3d__item"
-						style="background-image: url(../static/img/1.jpg);">
+						style="background-image: url(${contextPath}/static/img/1.jpg);">
 						<h2 class="slider3d__heading" data-text="SO HEADING"></h2>
 					</div>
 					<div class="slider3d__item"
-						style="background-image: url(../static/img/2.jpg);">
+						style="background-image: url(${contextPath}/static/img/2.jpg);">
 						<h2 class="slider3d__heading" data-text="MUCH ROTATION"></h2>
 					</div>
 					<div class="slider3d__item"
-						style="background-image: url(../static/img/3.jpg);">
+						style="background-image: url(${contextPath}/static/img/3.jpg);">
 						<h2 class="slider3d__heading" data-text="VERY 3D"></h2>
 					</div>
 					<div class="slider3d__item"
-						style="background-image: url(../static/img/4.jpg);">
+						style="background-image: url(${contextPath}/static/img/4.jpg);">
 						<h2 class="slider3d__heading" data-text="SUCH JAVASCRIPT"></h2>
 					</div>
 					<div class="slider3d__item"
-						style="background-image: url(../static/img/5.jpg);">
+						style="background-image: url(${contextPath}/static/img/5.jpg);">
 						<h2 class="slider3d__heading" data-text="WOW WOW!"></h2>
 					</div>
 				</div>

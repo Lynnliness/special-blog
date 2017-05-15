@@ -28,6 +28,16 @@ import com.special.base.controller.BaseController;
 @RequestMapping(value = "/")
 public class LoginController extends BaseController {
 
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public ModelAndView index() {
+        return new ModelAndView("index");
+    }
+    
+    @RequestMapping(value = "/index", method = RequestMethod.GET)
+    public ModelAndView index2() {
+        return new ModelAndView("index");
+    }
+
     @RequestMapping(value = "/web/login", method = RequestMethod.GET)
     public ModelAndView toLogin() {
         return new ModelAndView("index");
