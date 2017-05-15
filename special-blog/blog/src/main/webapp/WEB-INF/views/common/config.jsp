@@ -21,13 +21,13 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script src="${contextPath }/static/common/jquery-3.2.1.js"></script>
 <script src="${contextPath }/static/common/AjaxUtils.js"></script>
 <script src="${contextPath }/layer/layer.js"></script>
 <script src="${contextPath }/bootstrap/dist/js/bootstrap.js"></script>
 <script src="${contextPath }/jquery_validate/jquery.validate.js"></script>
 <script src="${contextPath }/jquery_validate/localization/messages_zh.js"></script>
-
 </head>
 <body>
 </body>

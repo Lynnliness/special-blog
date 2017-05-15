@@ -55,18 +55,13 @@
 	<servlet-mapping>
 		<servlet-name>SpringMVC</servlet-name>
 		<!-- api -->
-		<url-pattern>/**</url-pattern>
+		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
-		<servlet-name>SpringMVC</servlet-name>
-		<!-- 此处可以可以配置成*.do，对应struts的后缀习惯 -->
-		<url-pattern>*.htm</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>SpringMVC</servlet-name>
-		<!-- 此处可以可以配置成*.do，对应struts的后缀习惯 -->
-		<url-pattern>*.do</url-pattern>
-	</servlet-mapping>
+        <servlet-name>SpringMVC</servlet-name>
+        <!-- api -->
+        <url-pattern>*.do</url-pattern>
+    </servlet-mapping>
 	<jsp-config>
 		<!-- 移除 jsp 标签和 jstl 标签输出的空行 -->
 		<jsp-property-group>
